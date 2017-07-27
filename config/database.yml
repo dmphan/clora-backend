@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: clora_production
   username: clora
   password: <%= ENV['CLORA_DATABASE_PASSWORD'] %>
