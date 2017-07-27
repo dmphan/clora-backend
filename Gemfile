@@ -31,6 +31,7 @@ gem 'pg_search'
 gem 'geocoder'
 gem 'stopwords-filter', require: 'stopwords'
 gem 'active_model_serializers'
+gem 'memoist', '~> 0.14.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
