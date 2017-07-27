@@ -22,8 +22,7 @@ module Api::V1
         search_terms.concat filtered 
       end
       
-      @consultants = Consultant.includes(:products).near(params[:locality]).search_for(search_terms.join(" "))
-      #@consultants = Consultant.near(params[:locality]).joins(:products).where(products: {id: params[:products]}).search_for(search_terms.join(" "))
+      @consultants = Consultant.near(params[:locality]).joins(:products).where(products: {id: params[:products]}).search_for(search_terms.join(" "))
       render json: @consultants 
     end
   end
